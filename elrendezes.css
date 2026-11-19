@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "h h"
+                        "n n"
+                        "as ar"
+                        "f f";
+    gap: 8px;
+}
+header {
+    grid-area: h;
+}
+nav {
+    grid-area: n;
+}
+aside {
+    grid-area: as;
+}
+article {
+    grid-area: ar;
+}
+footer {
+    grid-area: f;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                            "n"
+                            "as"
+                            "ar"
+                            "f";
+    }
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+}
